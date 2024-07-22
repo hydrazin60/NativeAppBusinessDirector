@@ -1,15 +1,17 @@
-import { View, Text, StyleSheet } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { Link } from "expo-router";
 
-export default function Index() {
+const index = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Index Hello</Text>
-      <Link href="/setting">Settings</Link>
+      <Text>index</Text>
+      <Link href={"/setting"}>setting go</Link>
     </View>
   );
-}
+};
+
+export default index;
 
 const styles = StyleSheet.create({
   container: {
@@ -17,8 +19,5 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  title: {
-    fontSize: 30,
-    fontWeight: "600",
-  },
+  button: {},
 });
