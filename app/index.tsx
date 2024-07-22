@@ -1,20 +1,24 @@
-import { StyleSheet, Text, View } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import React from "react";
+import { Link } from "expo-router";
 
-const RooyLayout = () => {
+export default function Index() {
   return (
     <View style={styles.container}>
-      <Text> RooyLayout</Text>
+      <Text style={styles.title}>Index Hello</Text>
+      <Link href="/setting">Settings</Link>
     </View>
   );
-};
+}
 
-export default RooyLayout;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    display: "flex",
-    alignItems: "center",
     justifyContent: "center",
+    alignItems: "center",
+  },
+  title: {
+    fontSize: 30,
+    fontWeight: "600",
   },
 });
